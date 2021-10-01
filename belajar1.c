@@ -121,5 +121,38 @@ void main()
 
 
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int akademik, keterampilan, psikologi, rata;
+    puts("-------------------------------------------");
+    puts("\t Seleksi Rekruitmen Karyawan");
+    puts("-------------------------------------------");
+    printf("Masukkan nilai Tes Akademik : ");\
+    scanf("%d", &akademik);
+
+    printf("Masukkan nilai Tes Keterampilan : ");
+    scanf("%d", &keterampilan);
+
+    printf("Masukkan nilai Tes Psikologi : ");
+    scanf("%d", &psikologi);
+
+    rata = (akademik+keterampilan+psikologi) / 3;
+
+    if(rata >= 75)
+    {
+        if(akademik>keterampilan || akademik>psikologi)
+        puts("Diterima ditempatkan di bagian administrasi");
+        else if(keterampilan>akademik || keterampilan>psikologi)
+        puts("Diterima ditempatkan di bagian produksi");
+        else
+        puts("Diterima ditempatkan di bagian pemasaran");
+    }
+    else
+    puts("\t Maaf anda tidak lolos seleksi");
+    return 0;
+}
 
 
