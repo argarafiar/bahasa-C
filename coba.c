@@ -51,9 +51,40 @@ void main(){
 //        }
 //        printf("hasil total = %d", hasil);
 //}
+#include <stdio.h>
+#include <stdlib.h>
 
-float a=5, b=2, hasil;
+int main()
+{
+    int bil1, bil2, pil, hsl;
 
-hasil = a%b;
-printf("hasil = %.2f", hasil);
+    puts("Kalkulator Sederhana");
+    printf("Masukkan bilangan pertama : ");
+    scanf("%d", &bil1);
+
+    printf("Masukkan bilangan kedua : ");
+    scanf("%d", &bil2);
+
+    printf("Menu Matematika\n");
+    printf("1. Penjumlahan\n");
+    printf("2. Pengurangan\n");
+    printf("3. Pembagian\n");
+    printf("4. Perkalian\n");
+    printf("Masukkan pilihan anda : ");
+    scanf("%d", &pil);
+
+    if(pil == 1)
+    hsl = bil1 + bil2;
+        else if (pil == 2)
+        hsl = bil1 - bil2;
+            else if(pil == 3)
+            hsl = bil1 / bil2;
+        else if(pil == 4)
+        hsl = bil1 * bil2;
+    else
+    puts("Error!");
+
+    printf("Hasil operasi tersebut = %d", hsl);
+    return 0;
 }
+
